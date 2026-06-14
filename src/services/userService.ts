@@ -18,11 +18,11 @@ export const getFavorites = async (userId:number): Promise <Favorite[]>=>{
     const response = await api.get<Favorite[]>("api/user/favorites/{userId}")
     return response.data;
 }
-export const deleteFavorites = async(): => {
-    const response =
-    return response.data;
-}
 export const getHistory = async(userId:number): Promise<ReadingHistory[]>=> {
     const response = await api.get<ReadingHistory>("api/user/history/{userId}")
+    return response.data;
+}
+export const deleteFavoriteById = async(id: number): Promise <Favorite[]>=> {
+    const response = await api.delete
     return response.data;
 }
