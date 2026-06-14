@@ -22,7 +22,7 @@ export const deleteFavorites = async(): => {
     const response =
     return response.data;
 }
-export const getHistory = async(userId:number): Promise<> {
-    const response = 
+export const getHistory = async(userId:number): Promise<ReadingHistory[]>=> {
+    const response = await api.get<ReadingHistory>("api/user/history/{userId}")
     return response.data;
 }
